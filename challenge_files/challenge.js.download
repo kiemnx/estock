@@ -1,0 +1,12 @@
+"use strict";var dateFormat='DD/MM/YYYY';var api={getLeaderBoard:'Challenge/SearchSubmited',getNominatedChallenge:'Challenge/SearchNominatedChallenge',base:PermaLinkForSource}
+function init(){$('.start-date').datetimepicker({format:dateFormat});$('.end-date').datetimepicker({format:dateFormat});checkEllipsisActive("description");convertUTCTextTimes($(document.body));var ss=sessionStorage;if(ss){ss.setItem("CHALLENGE_INDEX",location.href);}}
+function getDate(element,dateFormat){var date;try{date=$.datepicker.parseDate(dateFormat,element.value);}catch(error){date=null;}
+return date;}
+function checkEllipsisActive(object){var e=document.getElementsByClassName(object)[0];if(e.offsetHeight<e.scrollHeight){e.title=e.getElementsByTagName('span')[0].textContent;}else{e.removeAttribute('title');}}
+$(document).ready(function(){init();function UpdatePaginationURL(){if($('.pager-footer')[0]){let url=window.location.href;if($('.pager-footer .go-to-first-page')[0]){url=$('.pager-footer .go-to-first-page').attr('href');}else if($('.pager-footer .prev-page')[0]){url=$('.pager-footer .prev-page').attr('href');}
+let urlArr=url.split('?');if(urlArr.length>1&&urlArr[1]!==''){url+="&page=1";}else{url+="?page=1";}
+$('.pager-footer .go-to-first-page').attr('href',url);let active_page=$('.pager-footer li span').text();if(parseInt(active_page)==2){$('.pager-footer .prev-page').attr('href',url);}
+if(parseInt(active_page)>1&&$('.pager-footer .go-to-first-page')[0]){if(parseInt($('.pager-footer li:eq(2) a').text())==1){$('.pager-footer li:eq(2) a').attr('href',url);}}
+if(parseInt(lbUserPage)>1){let value=parseInt(lbUserPage);let url=window.location.href;let urlArr=url.split('?');if(urlArr.length>1&&urlArr[1]!==''){let params=urlArr[1].split('&');if(params.filter(item=>item.startsWith('page=',0)).length>0){params=params.map(item=>{return(item.startsWith('page=',0)?'lc='+value:item)});url=urlArr[0]+'?'+params.join('&');}else{url=url+'&'+'page='+value}}else{url=urlArr[0]+'?page='+value;}
+history.pushState(null,'',url);}}}
+$('#chalenge-language').on('change',function(){let value=$(this).val().toString();let url=window.location.href;let urlArr=url.split('?');url=urlArr[0]+'?lc='+value;window.location.href=url;UpdatePaginationURL();});$(window).resize(function(){checkEllipsisActive("description");});UpdatePaginationURL();});

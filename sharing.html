@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://codelearn.io/sharing -->
+<html lang="vi" class="static dir-ltr codecamp-blog" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Cùng chia sẻ về cuộc sống, công việc và kinh nghiệm lập trình của bạn bằng ngòi bút cùng chúng tôi.">
+<meta name="author" content="CodeLearn">
+<link rel="shortcut icon" href="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/content/codelearn-icon.png">
+<link rel="apple-touch-icon" href="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/content/codelearn-icon.png">
+<link rel="canonical" href="https://codelearn.io/sharing">
+<link rel="alternate" hreflang="vi" href="https://codelearn.io/sharing">
+<link rel="alternate" hreflang="en-US" href="https://codelearn.io/sharing">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+<title>Chia sẻ và học hỏi kiến thức với hàng nghìn lập trình viên khác</title>
+
+<meta property="og:title" content="Chia sẻ và học hỏi kiến thức với hàng nghìn lập trình viên khác">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codelearn.io/sharing">
+<meta property="og:description" content="Cùng chia sẻ về cuộc sống, công việc và kinh nghiệm lập trình của bạn bằng ngòi bút cùng chúng tôi.">
+<meta property="og:image" content="/Themes/TheCodeCampPro/Resources/Images/content/blog-share.jpg">
+<meta property="fb:app_id" content="648326032295473">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://codelearn.io/sharing">
+<meta name="twitter:title" content="Chia sẻ và học hỏi kiến thức với hàng nghìn lập trình viên khác">
+<meta name="twitter:description" content="Cùng chia sẻ về cuộc sống, công việc và kinh nghiệm lập trình của bạn bằng ngòi bút cùng chúng tôi.">
+<meta name="twitter:image" content="/Themes/TheCodeCampPro/Resources/Images/content/blog-share.jpg">
+<meta name="twitter:site" content="@Codelearn.io">
+<meta name="twitter:creator" content="@Codelearn.io">
+
+<meta name="google-signin-client_id" content="16523143533-ovv9lj8c7i8sv36sv3lguom0msmdk8ah.apps.googleusercontent.com">
+
+<script src="./sharing_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./sharing_files/analytics.js.download"></script><script type="text/javascript" async="" src="./sharing_files/recaptcha__vi.js.download" crossorigin="anonymous" integrity="sha384-Gz4GRQQcVEYZAcxc5Yxon4APT+NJtG0PxbW6fa7hSJdStazmzdzqhiru1GRGOg3K"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script><script async="" src="./sharing_files/js"></script>
+<script>
+        var isGetNotification = true;
+        var isNotCountComment = false;
+
+        var s3Storage = '';
+        var resourcePath = '/Themes/TheCodeCampPro/Resources';
+        var strAuthen = '';
+        var faceId = '648326032295473';
+        var isLoadedFacebook = 'False';
+        if (strAuthen == '') {
+            var googleId = '16523143533-ovv9lj8c7i8sv36sv3lguom0msmdk8ah.apps.googleusercontent.com';
+        }
+
+        if (strAuthen == '') {
+            var LOGIN_VALIDATOR, SIGNUP_VALIDATOR;
+            function openModal(tab) {
+
+                $('#loginModal a[data-target="#' + tab + '"]').tab('show');
+                switch (tab) {
+                    case 'login':
+                        $(".btn--facebook").attr('title', 'Đăng nhập bằng Facebook');
+                        $(".btn--google").attr('title', 'Đăng nhập bằng Google');
+                        $("#loginModal .header-card").text('Đăng nhập tài khoản của bạn');
+                        SIGNUP_VALIDATOR && SIGNUP_VALIDATOR.resetForm();
+                        break;
+                    case 'signup':
+                        $(".btn--facebook").attr('title', 'Tiếp tục với Facebook');
+                        $(".btn--google").attr('title', 'Tiếp tục với Google');
+                        $("#loginModal .header-card").text('Đăng ký tài khoản mới');
+                        LOGIN_VALIDATOR && LOGIN_VALIDATOR.resetForm();
+                        break;
+                }
+            }
+        }
+
+        if ('https://codelearn.io' == location.origin.toLocaleLowerCase()) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-141685371-1');
+            gtag('config', 'USER_MANAGEMENT');
+            gtag('set', { 'user_id': 'CodeLearn-Anonymous' });
+
+            // Measure Google Ads conversions
+            gtag('event', 'conversion', {
+                'send_to': 'USER_MANAGEMENT/CodeLearn-Anonymous',
+            });
+
+            window['GoogleAnalyticsObject'] = 'ga';
+            window['ga'] = window['ga'] || function () {
+                (window['ga'].q = window['ga'].q || []).push(arguments)
+            };
+            ga('set', 'userId', 'CodeLearn-Anonymous' );
+        }
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: faceId,
+                xfbml: true,
+                version: 'v7.0'
+            });
+            FB.AppEvents.logPageView();
+            isLoadedFacebook = true;
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+<script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '700313553710795');
+        fbq('track', 'PageView');
+    </script>
+
+<link href="./sharing_files/blog.min.css" rel="stylesheet" type="text/css">
+<link href="./sharing_files/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="./sharing_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="./sharing_files/styles.min.css" rel="stylesheet" type="text/css">
+<link href="./sharing_files/common.min.css" rel="stylesheet" type="text/css">
+<link href="./sharing_files/Site.min.css" rel="stylesheet" type="text/css">
+<link href="./sharing_files/login-modal.min.css" rel="stylesheet" type="text/css">
+<script src="./sharing_files/jquery.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/bootstrap.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/jquery-ui.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/anchor.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/moment.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/moment-with-locales.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/jquery.validate.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/additional-methods.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/api.js.download" type="text/javascript"></script>
+<script src="./sharing_files/login-form.min.js.download" type="text/javascript"></script>
+<script async="" defer="" src="./sharing_files/platform.js.download" type="text/javascript" gapi_processed="true"></script>
+<script src="./sharing_files/common.min.js.download" type="text/javascript"></script>
+</head>
+<body class="hold-transition site-body skin-sku-light layout-top-nav sharing ">
+<script>
+        //<![CDATA[
+        var LANG_CURRENT = "vn";
+        const CurrentUserId = 0;
+        const IS_ADMIN = false;
+        
+        PKLService.init({ strVersion: '-2083650086', strLangCode: 'vn', IsHasLogin: false, url: location.origin });
+        //]]>
+</script>
+<div id="layout-navigation" class="group">
+<div class="zone zone-navigation">
+<article class="widget-navigation widget-menu-widget widget" style="height: 69px;">
+<header class="navbar site-header">
+
+<div class="wrap-site-logo">
+<a title="CodeLearn" href="https://codelearn.io/">
+<img alt="CodeLearn nền tảng dạy lập trình trực tuyến" class="site-logo" src="./sharing_files/codelearn-logo.png">
+<img alt="CodeLearn lập trình mỗi ngày" class="site-logo-mobile" src="./sharing_files/codelearn-mobile-logo.png">
+</a>
+</div>
+<div class="wrap-right-header">
+<input type="checkbox" id="mobile-menu-cb" name="mobile-menu-cb">
+<label class="hamburger-button" for="mobile-menu-cb">
+<span class="hamburger-icon"></span>
+</label>
+<label class="hamburger-menu-mask" for="mobile-menu-cb"></label>
+<nav class="site-menu">
+<ul class="menu menu-main-menu">
+<li>
+<a href="https://kiemnx.github.io/estock/hoctap" title="Học tập">Học tập</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/training" title="Luyện tập">Luyện tập</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/event" title="Luyện tập">Sự kiện</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/challenge" title="Thử thách">Thử thách</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/evaluating" title="Đánh giá">Đánh giá</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/discussion" title="Thảo luận">Thảo luận</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/leaderboard" title="Xếp hạng">Xếp hạng</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/game" title="Trò chơi">Trò chơi</a>
+</li>
+<li>
+<a href="https://kiemnx.github.io/estock/sharing" title="Chia sẻ">Chia sẻ</a>
+</li>
+<li>
+<a href="https://www.vps.com.vn/psaoopenaccount/" title="Thực hành đầu tư" target="blank">Thực hành đầu tư</a>
+</li>
+</ul>
+<div class="dropdown dropdown-language">
+<a href="https://codelearn.io/sharing#" class="dropdown-toggle btn-dark btn--language " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Tiếng Việt">
+<img alt="Tiếng Việt" class="button-language btn-img flag" src="./sharing_files/vn.png">
+</a>
+<ul class="dropdown-menu">
+<li>
+<span class="change-lang" data-link="/language/setLanguageLocal?name=en&amp;redirectUrl=">
+<img alt="en" class="icon-language" src="./sharing_files/en.png">
+English
+</span>
+</li>
+<li>
+<span class="change-lang" data-link="/language/setLanguageLocal?name=vn&amp;redirectUrl=">
+<img alt="vn" class="icon-language" src="./sharing_files/vn.png">
+Tiếng Việt
+</span>
+</li>
+</ul>
+</div>
+</nav>
+
+
+<ul class="site-user-menu">
+<li>
+<button id="login-header" class="btn btn-login" data-toggle="modal" data-target="#loginModal" onclick="openModal(&#39;login&#39;)">Đăng nhập</button>
+<button class="btn" data-toggle="modal" data-target="#loginModal" onclick="openModal(&#39;signup&#39;)">Đăng ký</button>
+</li>
+</ul>
+</div>
+</header>
+</article>
+<article class="widget-navigation widget-bread-cumps-widget widget">
+<nav aria-label="breadcrumb">
+<div class="container">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="https://codelearn.io/">Trang chủ</a></li>
+<li class="breadcrumb-item"><a href="https://codelearn.io/sharing">Chia sẻ</a></li>
+</ol>
+</div>
+</nav>
+
+<div class="fb-customerchat" attribution="setup_tool" page_id="2254662768188202" greeting_dialog_display="hide">
+</div>
+</article></div>
+</div>
+<main id="layout-main" class="group">
+<div id="layout-content" class="group">
+<div id="content" class="group">
+<div class="zone zone-content">
+
+<div class="container">
+<form id="form-search" action="https://codelearn.io/sharing" class="blog-search-form">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-5 wrap-main-search">
+<div class="wrap-input-field"><input name="str" type="text" placeholder="Tìm kiếm tiêu đề, tác giả, hashtag"><i class="search-trigger cl-icon-search"></i></div>
+</div>
+</div>
+</form>
+<div id="blog-list" class="blog-list">
+<div class="feature">
+<div class="row">
+<div class="col-lg-5 img-container">
+<a href="https://codelearn.io/sharing/cach-chuyen-doi-cac-he-so-dem">
+<img src="./sharing_files/cach-chuyen-doi-cac-he-so-dem-63741311114.3991.jpg" alt="Cách Chuyển Đổi Các Hệ Số Đếm Coder Cần Biết">
+</a>
+</div>
+<div class="col-lg-7 info">
+<div class="main">
+<div class="block">
+<h3><a title="Cách Chuyển Đổi Các Hệ Số Đếm Coder Cần Biết" href="https://codelearn.io/sharing/cach-chuyen-doi-cac-he-so-dem">Cách Chuyển Đổi Các Hệ Số Đếm Coder Cần Biết</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p class="short-desc">Trong bài viết này mình sẽ chỉ các bạn cách chuyển đổi giữa các hệ số cơ bản nhất</p>
+</div>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/cpp">cpp</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+</div>
+</div><div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="Windstar981" href="https://codelearn.io/profile/362702"><span class="author-name">Windstar981</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-22</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">861</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">239</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<b class="blog-category">Xu hướng</b><div class="list-thumb"><div class="row">
+<div class="col-md-4 thumb-item">
+<div class="row block">
+<div class="top">
+<div class="col-md-12 main-image">
+<a href="https://codelearn.io/sharing/4-xu-huong-front-end-nam-2021">
+<img src="./sharing_files/4-xu-huong-front-end-nam-2021-63741196607.7882.jpg" alt="4 Xu Hướng Front-end Không Thể Bỏ Lỡ 2021">
+</a>
+</div>
+<div class="col-md-12 info">
+<h4>
+<a title="4 Xu Hướng Front-end Không Thể Bỏ Lỡ 2021" href="https://codelearn.io/sharing/4-xu-huong-front-end-nam-2021">4 Xu Hướng Front-end Không Thể Bỏ Lỡ 2021</a>
+</h4>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>2020 sắp kết thúc rồi, vậy hãy cùng xem qua đâu là xu hướng front-end được mong chờ nhất vào năm 2021, và đây là quan điểm cá nhân tôi :))</p>
+</div>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/front-end">front-end</a></span>
+<span><a href="https://codelearn.io/sharing/tags/framework">framework</a></span>
+<span><a href="https://codelearn.io/sharing/tags/programming">programming</a></span>
+<span><a href="https://codelearn.io/sharing/tags/website">website</a></span>
+</div>
+</div><div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="Phoebe" href="https://codelearn.io/profile/579538"><span class="author-name">Phoebe</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-17</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">3673</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">147</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 thumb-item">
+<div class="row block">
+<div class="top">
+<div class="col-md-12 main-image">
+<a href="https://codelearn.io/sharing/tong-hop-50-keyword-can-nho-trong-java">
+<img src="./sharing_files/tong-hop-cac-keyword-trong-java-63741048053.822.jpg" alt="Tổng Hợp 50+ Keyword Cần Nhớ Trong Java">
+</a>
+</div>
+<div class="col-md-12 info">
+<h4>
+<a title="Tổng Hợp 50+ Keyword Cần Nhớ Trong Java" href="https://codelearn.io/sharing/tong-hop-50-keyword-can-nho-trong-java">Tổng Hợp 50+ Keyword Cần Nhớ Trong Java</a>
+</h4>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>Nếu bạn muốn học java và thành thục thì việc thông thạo các keyword của nó thật sự cần thiết. Sau đây mình xin chia sẻ 50 keyword được sử dụng trong ngôn ngữ Java</p>
+</div>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/java">java</a></span>
+<span><a href="https://codelearn.io/sharing/tags/keyword">keyword</a></span>
+<span><a href="https://codelearn.io/sharing/tags/programming">programming</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+</div>
+</div><div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="Anh_Quoc" href="https://codelearn.io/profile/197416"><span class="author-name">Anh_Quoc</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-18</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">803</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">144</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 thumb-item">
+<div class="row block">
+<div class="top">
+<div class="col-md-12 main-image">
+<a href="https://codelearn.io/sharing/asyncawait-trong-javascript">
+<img src="./sharing_files/asyncawait-trong-javascript-63741267332.9522.jpg" alt="Async/Await Trong Javascript Có Làm Khó Được Bạn?">
+</a>
+</div>
+<div class="col-md-12 info">
+<h4>
+<a title="Async/Await Trong Javascript Có Làm Khó Được Bạn?" href="https://codelearn.io/sharing/asyncawait-trong-javascript">Async/Await Trong Javascript Có Làm Khó Được Bạn?</a>
+</h4>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>Đây là cặp keyword vô cùng mạnh mẽ trong Javascript. Hiểu được Async/Await sẽ giúp chúng ta viết code dễ dàng, ngắn gọn và hiệu quả hơn nhiều.</p>
+</div>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/javascript">javascript</a></span>
+<span><a href="https://codelearn.io/sharing/tags/js">js</a></span>
+<span><a href="https://codelearn.io/sharing/tags/async">async</a></span>
+<span><a href="https://codelearn.io/sharing/tags/await">await</a></span>
+<span><a href="https://codelearn.io/sharing/tags/asynchronous">asynchronous</a></span>
+</div>
+</div><div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="Khoaa" href="https://codelearn.io/profile/397945"><span class="author-name">Khoaa</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-18</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">924</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">103</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<b class="blog-category">Bài viết mới</b>
+<div class="list-items">
+<div class="item">
+<div class="row">
+<div class="col-md-4 blog-image">
+<a href="https://codelearn.io/sharing/lap-trinh-game-dua-xe-voi-pygame">
+<img src="./sharing_files/lap-trinh-game-dua-xe-voi-pygame-63741703749.7302.jpg" alt="Lập Trình Game Đua Xe Với Pygame">
+</a>
+</div>
+<div class="col-md-8 blog-info">
+<div class="top">
+<h3><a title="Lập Trình Game Đua Xe Với Pygame" href="https://codelearn.io/sharing/lap-trinh-game-dua-xe-voi-pygame">Lập Trình Game Đua Xe Với Pygame</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>mình và các bạn sẽ cùng lập trình game đua xe đơn giản với pygame. Bài hướng dẫn cũng khá đơn giản, phù hợp với các bạn mới học lập trình game</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/racing">racing</a></span>
+<span><a href="https://codelearn.io/sharing/tags/pygame">pygame</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+<span><a href="https://codelearn.io/sharing/tags/game">game</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+</div>
+</div>
+<div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="buitongminhchau01032002@gmail.com" href="https://codelearn.io/profile/4503941"><span class="author-name">buitongminhchau01032002@gmail.com</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-25</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">15</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="list-items">
+<div class="item">
+<div class="row">
+<div class="col-md-4 blog-image">
+<a href="https://codelearn.io/sharing/chuyen-doi-object-serialization-java">
+<img src="./sharing_files/serialization-trong-java-63741618575.6151.jpg" alt="Chuyển Đổi Object Với Serialization Trong Java">
+</a>
+</div>
+<div class="col-md-8 blog-info">
+<div class="top">
+<h3><a title="Chuyển Đổi Object Với Serialization Trong Java" href="https://codelearn.io/sharing/chuyen-doi-object-serialization-java">Chuyển Đổi Object Với Serialization Trong Java</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>Serialization là một trong những công cụ giúp lập trình viên trao đổi hay lưu trữ các Objects vào file, database hay memory. Vậy nó được sử dụng như thế nào?</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/serialization">serialization</a></span>
+<span><a href="https://codelearn.io/sharing/tags/java">java</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+</div>
+</div>
+<div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="TrisDo" href="https://codelearn.io/profile/93400"><span class="author-name">TrisDo</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-25</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">15</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="list-items">
+<div class="item">
+<div class="row">
+<div class="col-md-4 blog-image">
+<a href="https://codelearn.io/sharing/top-10-xu-huong-ai-nam-2021">
+<img src="./sharing_files/top-10-xu-huong-ai-trong-nam-2021-63741742547.299.jpg" alt="Top 10 Xu Hướng AI Nổi Bật Trong Năm 2021">
+</a>
+</div>
+<div class="col-md-8 blog-info">
+<div class="top">
+<h3><a title="Top 10 Xu Hướng AI Nổi Bật Trong Năm 2021" href="https://codelearn.io/sharing/top-10-xu-huong-ai-nam-2021">Top 10 Xu Hướng AI Nổi Bật Trong Năm 2021</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:94.0%"></span></span>
+</div>
+<p>2020 đã chứng kiến ​​nhiều nền tảng, nghiên cứu và công cụ độc đáo sử dụng AI ở mức độ lớn và tới năm 2021 hứa hẹn sẽ là năm vàng cho việc triển khai AI.</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/artificial-intelligence">artificial-intelligence</a></span>
+<span><a href="https://codelearn.io/sharing/tags/ai">ai</a></span>
+<span><a href="https://codelearn.io/sharing/tags/trend">trend</a></span>
+</div>
+</div>
+<div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="MarcoVu" href="https://codelearn.io/profile/1046194"><span class="author-name">MarcoVu</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-24</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">51</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="list-items">
+<div class="item">
+<div class="row">
+<div class="col-md-4 blog-image">
+<a href="https://codelearn.io/sharing/stream-xu-ly-du-lieu-the-nao-trong-java">
+<img src="./sharing_files/tim-hieu-ve-Stream-java-63741574730.2679.jpg" alt="Stream Xử Lý Dữ Liệu Thế Nào Trong Java">
+</a>
+</div>
+<div class="col-md-8 blog-info">
+<div class="top">
+<h3><a title="Stream Xử Lý Dữ Liệu Thế Nào Trong Java" href="https://codelearn.io/sharing/stream-xu-ly-du-lieu-the-nao-trong-java">Stream Xử Lý Dữ Liệu Thế Nào Trong Java</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>Với stream bạn có thể xử lý dữ liệu trong java theo cách khai báo giống như trong SQL! Trong bài viết này chúng ta sẽ tìm hiểu về Stream là gì và các đặc điểm của nó.</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/stream">stream</a></span>
+<span><a href="https://codelearn.io/sharing/tags/java">java</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+<span><a href="https://codelearn.io/sharing/tags/tutorial">tutorial</a></span>
+</div>
+</div>
+<div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="TrisDo" href="https://codelearn.io/profile/93400"><span class="author-name">TrisDo</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-23</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">85</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="list-items">
+<div class="item">
+<div class="row">
+<div class="col-md-4 blog-image">
+<a href="https://codelearn.io/sharing/tai-sao-nen-dung-arraylist">
+<img src="./sharing_files/tai-sao-nen-dung-arraylist-63741528609.8387.jpg" alt="Tại Sao Nên Dùng ArrayList Thay Cho Array?">
+</a>
+</div>
+<div class="col-md-8 blog-info">
+<div class="top">
+<h3><a title="Tại Sao Nên Dùng ArrayList Thay Cho Array?" href="https://codelearn.io/sharing/tai-sao-nen-dung-arraylist">Tại Sao Nên Dùng ArrayList Thay Cho Array?</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>Array và ArrayList đều được sử dụng phổ biến trong quá trình phát triển ứng dụng Java nhưng tại sao ArrayList nên là lựa chọn ưu tiên của bạn?</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/java">java</a></span>
+<span><a href="https://codelearn.io/sharing/tags/array">array</a></span>
+<span><a href="https://codelearn.io/sharing/tags/arraylist">arraylist</a></span>
+<span><a href="https://codelearn.io/sharing/tags/hoc-lap-trinh">hoc-lap-trinh</a></span>
+</div>
+</div>
+<div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="TrisDo" href="https://codelearn.io/profile/93400"><span class="author-name">TrisDo</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-23</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">83</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="list-items">
+<div class="item">
+<div class="row">
+<div class="col-md-4 blog-image">
+<a href="https://codelearn.io/sharing/lap-trinh-web-don-gian-voi-java-phan-2">
+<img src="./sharing_files/lap-trinh-web-don-gian-voi-java-phan-2-63740099203.4352.jpg" alt="Lập Trình Web Với Java: Login (Phần 2)">
+</a>
+</div>
+<div class="col-md-8 blog-info">
+<div class="top">
+<h3><a title="Lập Trình Web Với Java: Login (Phần 2)" href="https://codelearn.io/sharing/lap-trinh-web-don-gian-voi-java-phan-2">Lập Trình Web Với Java: Login (Phần 2)</a></h3>
+<div class="user-rating">
+<span class="star-rating"><span style="width:100.0%"></span></span>
+</div>
+<p>Trong chủ đề này, mình sẽ hướng dẫn các bạn theo phong cách căn bản nhất giúp các bạn hiểu cách vận hành của các chức năng cũng như làm nền tảng để tiếp cận các framework dễ dàng</p>
+</div>
+<div class="bottom">
+<div class="row tag-list">
+<div class="col-md-12 tag-scroll">
+<span><a href="https://codelearn.io/sharing/tags/java">java</a></span>
+<span><a href="https://codelearn.io/sharing/tags/servlet">servlet</a></span>
+<span><a href="https://codelearn.io/sharing/tags/mvc">mvc</a></span>
+</div>
+</div>
+<div class="row author">
+<div class="col-md-7 text-left">
+<span>Tác giả:</span>
+<a title="Nguyentrinhan.dev" href="https://codelearn.io/profile/200027"><span class="author-name">Nguyentrinhan.dev</span></a>
+<span class="time-icon"><i class="cl-icon-circle"></i></span>
+<span class="time">2020-11-22</span>
+</div>
+<div class="col-md-5 text-right">
+<span class="comment-icon"><i class="cl-icon-eye"></i></span>
+<span class="comment-text total-view">70</span>
+<span class="comment-icon"><i class="cl-icon-share-alt"></i></span>
+<span class="comment-text">0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pager-footer">
+<ul class="pager"><li class="first"><span>1</span></li>
+<li><a href="https://codelearn.io/sharing?page=2">2</a></li>
+<li><a href="https://codelearn.io/sharing?page=3">3</a></li>
+<li><a href="https://codelearn.io/sharing?page=4">4</a></li>
+<li class="show-more"><span>...</span></li>
+<li>
+<a href="https://codelearn.io/sharing?page=2" title="" class="page-item next-page"><i class="cl-icon-angle-right" aria-hidden="true"></i></a>
+</li>
+<li class="last">
+<a href="https://codelearn.io/sharing?page=71" title="" class="page-item go-to-last-page"><i class="icon cl-icon-angle-double-right" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal-notification-user" role="dialog">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Thông báo</h3>
+</div>
+<div class="modal-body">
+<div id="register-write-blog">
+<form id="frm-register-write-blog">
+<span class="notification-register-title">
+Bạn không có quyền tạo bài viết nếu bạn muốn đăng bài hôm nay. Vui lòng đăng ký tại đây hoặc gửi đăng ký của bạn trực tiếp đến quản trị viên qua email: support.io@codelearn.io
+</span>
+<div class="form-group">
+<label for="Reason" class="required">Lý do đăng ký</label>
+<textarea rows="4" class="form-control" placeholder="" required="" name="Reason" id="Reason"></textarea>
+</div>
+</form>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+<button id="btn-register-write-blog" type="button" class="btn btn-sm btn--primary text-uppercase">Đăng ký ngay</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="modal-notification-user-registered" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+</div>
+<div class="modal-body">
+<span class="notification-content">
+Bạn không có quyền tạo bài viết nếu bạn muốn đăng bài hôm nay. Vui lòng đăng ký tại đây hoặc gửi đăng ký của bạn trực tiếp đến quản trị viên qua email: support.io@codelearn.io
+</span>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+    select.ui-datepicker-month {
+        width: 100px !important;
+    }
+
+    select.ui-datepicker-year {
+        width: 80px !important;
+    }
+</style></div>
+</div>
+</div>
+</main>
+<footer id="footer" class="group codecamp-footer">
+<div class="zone zone-footer">
+<div class=" main-footer">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6 introduction footer-column">
+<div class="logo-codelearn">
+<img src="./sharing_files/codelearn-logo.svg" alt="CodeLearn">
+</div>
+<p>
+CodeLearn là nền tảng tương tác trực tuyến hỗ trợ người dùng học tập, thực hành, thi đấu và đánh giá kỹ năng lập trình một cách nhanh chóng và chính xác.
+</p>
+<a href="https://www.facebook.com/CodeLearnFanpage" title="Facebook" target="_blank" class="social-button">
+<i class="cl-icon-facebook-f"></i>
+</a>
+<a href="https://www.youtube.com/channel/UCpt3dSDGk5fC7uU9OeFG5ig" title="Youtube" target="_blank" class="social-button">
+<i class="cl-icon-youtube"></i>
+</a>
+<a href="https://twitter.com/codelearn_io" title="Twitter" target="_blank" class="social-button">
+<i class="cl-icon-twitter-full"></i>
+</a>
+<a href="https://www.instagram.com/codelearn.io/" title="Instagram" target="_blank" class="social-button">
+<i class="cl-icon-instagram"></i>
+</a>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-2 links footer-column">
+<h4>Liên kết</h4>
+<p><a href="https://codelearn.io/learning" class="link-menu" title="Học tập">Học tập</a></p>
+<p><a href="https://codelearn.io/training" class="link-menu" title="Luyện tập">Luyện tập</a></p>
+<p><a href="https://codelearn.io/fights" class="link-menu" title="Cuộc thi">Cuộc thi</a></p>
+<p><a href="https://codelearn.io/game/index" class="link-menu" title="Trò chơi">Trò chơi</a></p>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-2 about footer-column">
+<h4>Thông tin</h4>
+<p><a href="https://codelearn.io/sharing" class="link-menu" title="Chia sẻ">Chia sẻ</a></p>
+<p><a href="https://codelearn.io/aboutus" title="Về chúng tôi">Về chúng tôi</a></p>
+<p><a href="https://codelearn.io/terms" title="Điều khoản sử dụng">Điều khoản sử dụng</a></p>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-2 help footer-column">
+<h4>Trợ giúp</h4>
+<p><a href="https://codelearn.io/help" title="Hỗ trợ">Hỗ trợ</a></p>
+<p><a href="https://codelearn.io/discussion" title="Thảo luận">Thảo luận</a></p>
+<p><a href="mailto:support@codelearn.io" title="Liên hệ với chúng tôi">Liên hệ với chúng tôi</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 right-reserved">
+<span class="powerby">
+<img src="./sharing_files/logo-fpt-footer.svg" alt="Fpt software" class="fpt-logo">
+Cung cấp bởi <a href="https://codelearn.io/">CodeLearn</a>
+</span>
+<span class="copyright">© 2020.</span>
+<span>Đã đăng ký bản quyền rev 11/6/2020 10:12:37 PM</span>
+</div>
+</div>
+</footer>
+<script src="./sharing_files/jquery.ui.datepicker-vi.min.js.download" type="text/javascript"></script>
+<script src="./sharing_files/blog.js.download" type="text/javascript"></script>
+
+<div id="fb-root"></div>
+
+<div class="modal fade modal-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-body login-modal">
+<div>
+
+<ul class="nav nav-tabs nav-fill" role="tablist">
+<li role="presentation" class="nav-item">
+<a class="nav-link" data-target="#login" aria-controls="login" role="tab" data-toggle="tab" onclick="openModal(&#39;login&#39;)">Đăng nhập</a>
+</li>
+<li role="presentation" class="nav-item active">
+<a class="nav-link" data-target="#signup" aria-controls="signup" role="tab" data-toggle="tab" onclick="openModal(&#39;signup&#39;)">Đăng ký</a>
+</li>
+</ul>
+
+<div class="tab-content">
+<h4 class="header-card">Đăng nhập bằng tài khoản</h4>
+<div class="signin-options">
+<button class="btn btn-default btn-block btn--microsoft icon-left" onclick="window.location.replace(&#39;https://oauth.codelearn.io/Home/SignIn&#39;)" title="Đăng nhập tài khoản FSoft qua Microsoft">
+<i class="cl-icon-windows" aria-hidden="true"></i>
+<span>Microsoft</span>
+</button>
+<button class="btn btn-default btn-block btn--facebook icon-left" onclick="facebookSignIn()">
+<i class="cl-icon-facebook-f" aria-hidden="true"></i>
+<span>Facebook</span>
+</button>
+<button class="btn btn-default btn-block btn--google icon-left" id="googleSignIn">
+<i class="cl-icon-google-full" aria-hidden="true"></i>
+<span>Google</span>
+</button>
+</div>
+<p class="label-or text-center">HOẶC</p>
+<div role="tabpanel" class="tab-pane " id="login">
+<form id="frmLogin">
+<div class="form-group">
+<input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" autocomplete="username">
+<a href="https://codelearn.io/resend-email" title="Gửi lại thư kích hoạt" class="resend-email hidden">Gửi lại thư kích hoạt</a>
+</div>
+<div class="form-group" style="margin-bottom: 30px;">
+<input name="password" type="password" class="form-control" placeholder="Vui lòng nhập mật khẩu" autocomplete="current-password">
+</div>
+<div class="form-button">
+<button type="submit" class="btn btn-default btn-block btn-blue btn-login">Đăng nhập</button>
+</div>
+<div class="col-md-12 registered-forgot" role="tablist">
+<div class="col-md-6 text-left">
+<a data-target="#signup" aria-controls="signup" role="tab" data-toggle="tab" onclick="openModal(&#39;login&#39;)">
+Chưa có tài khoản? Đăng ký
+</a>
+</div>
+<div class="col-md-6 text-right">
+<a href="https://codelearn.io/forgot-password">Quên mật khẩu</a>
+</div>
+</div>
+<div class="col-md-12 terms-of-use">
+Trang này được bảo vệ bởi reCAPTCHA và áp dụng <a href="https://codelearn.io/terms" target="_blank">Điều khoản sử dụng</a>.
+</div>
+</form>
+</div>
+<div role="tabpanel" class="tab-pane active" id="signup">
+<form id="frmSignup" method="POST" action="https://codelearn.io/">
+<div class="form-group">
+<input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" autocomplete="username">
+</div>
+<div class="form-group">
+<input name="email" type="email" class="form-control" placeholder="Email" autocomplete="email">
+</div>
+<div class="form-group">
+<input name="password" type="password" class="form-control" placeholder="Mật khẩu" autocomplete="current-password">
+</div>
+<div class="form-check">
+<div class="checkbox-area">
+<input name="cbAgree" type="checkbox" value="1" class="form-check-input" id="cbAgree" data-error="#cbAgree-error">
+<label class="form-check-label" for="cbAgree">
+Tôi đồng ý với <a href="https://codelearn.io/terms" target="_blank">Điều khoản sử dụng</a> của CodeLearn
+</label>
+</div>
+<div id="cbAgree-error"></div>
+</div>
+<button type="submit" class="btn btn-default btn-block btn-blue btn-signup">Đăng ký</button>
+<div class="col-md-12 registered-forgot" style="margin-bottom: 0;">
+<div class="col-md-6 text-left">
+<a data-target="#login" aria-controls="login" role="tab" data-toggle="tab" onclick="openModal(&#39;login&#39;)">
+Đã có tài khoản? Đăng nhập
+</a>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+        var siteKey = '6LcMTLMUAAAAAFLLyTIvjCj7k0bAG8ZqjnaTTrQE';
+        </script>
+<script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "CodeLearn",
+            "url": "https://codelearn.io",
+            "address": "Ha Noi, Viet Nam",
+            "sameAs": [
+            "https://www.facebook.com/CodeLearnFanpage/",
+            "https://www.linkedin.com/company/codelearnio",
+            "https://twitter.com/codelearn_io"
+            ]
+            }
+        </script>
+
+<noscript>
+        <img height="1" width="1" style="display:none" alt=""
+             src="https://www.facebook.com/tr?id=700313553710795&ev=PageView&noscript=1" />
+    </noscript>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="./sharing_files/anchor.html" width="256" height="60" role="presentation" name="a-m29u84xep646" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe width="1912" height="956" style="display: none;" src="./sharing_files/saved_resource.html"></iframe></div><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="./sharing_files/iframe.html" width="1912" height="NaN" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe></body></html>
